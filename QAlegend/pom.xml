@@ -50,11 +50,7 @@
 </dependency>
 
 
-  	<dependency>
-  		<groupId>com.obsquara</groupId>
-  		<artifactId>Selenium_basics_new</artifactId>
-  		<version>0.0.1-SNAPSHOT</version>
-  	</dependency>
+  
   </dependencies>
   <build>
         <plugins>
