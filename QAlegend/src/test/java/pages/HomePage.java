@@ -17,6 +17,8 @@ public class HomePage {
 	
 	@FindBy(xpath = "//a[@class='dropdown-toggle']//span")
 	WebElement logined_user;
+	@FindBy (xpath ="//section[@class='content-header']//h1")
+	WebElement welcome_user;
 	@FindBy(xpath ="//span[@class='title']")
 	WebElement user_management;
 	@FindBy(xpath = "//div[@class='m-8 pull-left mt-15 hidden-xs']")
@@ -29,7 +31,7 @@ public class HomePage {
 	WebElement endtour;
 	
 	public String getLoggedUser() {
-		String user=WebElementUtility.getText(logined_user);
+		String user=WebElementUtility.getText(welcome_user);
 		return user;
 	}
 	public String getTittle() {
@@ -51,9 +53,9 @@ public class HomePage {
 		WebElementUtility.clickOnElement(user_management);
 		
 	}
-	public ManageUserPage clickOnUsers() {
+	public UsersPage clickOnUsers() {
 		WebElementUtility.clickOnElement(users);
-		return new ManageUserPage(driver);
+		return new UsersPage(driver);
 		
 	}
 	public void clickOnEndTour() {

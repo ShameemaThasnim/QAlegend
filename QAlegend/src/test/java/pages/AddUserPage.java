@@ -60,9 +60,9 @@ public class AddUserPage {
 		WebElementUtility.enterValue(confirm_password, con_pass_word);
 		
 	}
-	public ManageUserPage clickOnSubmitButton() {
+	public UsersPage clickOnSubmitButton() {
 		WebElementUtility.clickOnElement(submit_button);
-		return new ManageUserPage(driver);
+		return new UsersPage(driver);
 		
 	}
 	public String getTittle() {

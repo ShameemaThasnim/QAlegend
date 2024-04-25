@@ -6,9 +6,9 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.qalegend.utilities.WebElementUtility;
 
-public class ManageUserPage {
+public class UsersPage {
 	WebDriver driver;
-	public ManageUserPage(WebDriver driver) {
+	public UsersPage(WebDriver driver) {
 		this.driver= driver;
 		PageFactory.initElements(driver, this);
 		
@@ -19,7 +19,7 @@ public class ManageUserPage {
 	WebElement search;
 	@FindBy(xpath = "//a[@class='dropdown-toggle']//span")
 	WebElement logined_user;
-	@FindBy(xpath = "//a[@class='btn btn-default btn-flat']")
+	@FindBy(xpath = "//a[@class='btn btn-default btn-flat' and text()='Sign Out']")
 	WebElement log_out;
 	
 	@FindBy (xpath="//td[@class='sorting_1']")
@@ -44,10 +44,14 @@ public class ManageUserPage {
 		
 	}
 	public void clickOnUserName() {
-		WebElementUtility.clickOnElement(logined_user);
+		//WebElementUtility.clickOnElement(logined_user);
+		WebElementUtility.scrollAndClick(driver, logined_user);
 	}
 	public LoginPage clickOnLogOut() {
 		WebElementUtility.clickOnElement(log_out);
 		return new LoginPage(driver);
 	}
 }
+
+
+

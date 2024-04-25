@@ -17,7 +17,7 @@ import org.testng.annotations.Test;
 import pages.AddUserPage;
 import pages.HomePage;
 import pages.LoginPage;
-import pages.ManageUserPage;
+import pages.UsersPage;
 
 public class AddUserPageTest extends Base {
 	@Test
@@ -32,8 +32,8 @@ public class AddUserPageTest extends Base {
 		home.clickOnEndTour();
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 		home.clickOnUserManagement();
-		ManageUserPage manage=home.clickOnUsers();
-		ManageUserPage manageuser= new ManageUserPage(driver);
+		UsersPage manage=home.clickOnUsers();
+		UsersPage manageuser= new UsersPage(driver);
 		AddUserPage adduser=manageuser.clickOnAddButton();
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 		AddUserPage add_user= new AddUserPage(driver);
@@ -55,8 +55,8 @@ public void verifyAddUser() throws IOException {
 		home.clickOnEndTour();
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 		home.clickOnUserManagement();
-		ManageUserPage manage=home.clickOnUsers();
-		ManageUserPage manageuser= new ManageUserPage(driver);
+		UsersPage manage=home.clickOnUsers();
+		UsersPage manageuser= new UsersPage(driver);
 		AddUserPage adduser=manageuser.clickOnAddButton();
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 		AddUserPage add_user= new AddUserPage(driver);
@@ -73,7 +73,7 @@ public void verifyAddUser() throws IOException {
 		add_user.enterUserName(user_name);
 		add_user.enterPassword(pass_word);
 		add_user.enterConPassword(pass_word);
-		ManageUserPage manage_s=add_user.clickOnSubmitButton();
+		UsersPage manage_s=add_user.clickOnSubmitButton();
 		manageuser.clickOnSearch();
 		String search_user=email;
 		manageuser.enterSearchValue(search_user);
@@ -83,7 +83,7 @@ public void verifyAddUser() throws IOException {
 		Assert.assertEquals(actual_user, user_name,Messages.USER_CREATION_FAILED);
 		}
 	@Test
-	public void verifyUserLoginWithNewUser() throws IOException {
+	public void verifyUserLoginWithNewlyAddedUser() throws IOException {
 		String username=ExcelUtility.readStringData(0, 1, Constants.LOGIN_PAGE_DATA);
 		String password=ExcelUtility.readStringData(0, 2, Constants.LOGIN_PAGE_DATA);
 		LoginPage login= new LoginPage(driver);
@@ -94,26 +94,26 @@ public void verifyAddUser() throws IOException {
 		home.clickOnEndTour();
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 		home.clickOnUserManagement();
-		ManageUserPage manage=home.clickOnUsers();
-		ManageUserPage manageuser= new ManageUserPage(driver);
+		UsersPage manage=home.clickOnUsers();
+		UsersPage manageuser= new UsersPage(driver);
 		AddUserPage adduser=manageuser.clickOnAddButton();
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 		AddUserPage add_user= new AddUserPage(driver);
-		String prefix=ExcelUtility.readStringData(0, 0, Constants.ADD_USER_DATA);
+		//String prefix=ExcelUtility.readStringData(0, 0, Constants.ADD_USER_DATA);
 		String firstName= RandomDataUtility.getFirstName();
 		String lastname= RandomDataUtility.getLastName();
 		String email= firstName+"."+lastname+"123@gmail.com";
 		String pass_word=firstName+"."+lastname;
 		String user_name=firstName;
-		add_user.enterPrefix(prefix);
+		//add_user.enterPrefix(prefix);
 		add_user.enterFirstName(firstName);
 		add_user.enterLastName(lastname);
 		add_user.enterEmail(email);
 		add_user.enterUserName(user_name);
 		add_user.enterPassword(pass_word);
 		add_user.enterConPassword(pass_word);
-		ManageUserPage manage_s=add_user.clickOnSubmitButton();
-		manageuser.clickOnUserName();
+		UsersPage manage_s=add_user.clickOnSubmitButton();
+		manage.clickOnUserName();
 		LoginPage relog=manageuser.clickOnLogOut();
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 		String username_re=user_name;
@@ -123,10 +123,10 @@ public void verifyAddUser() throws IOException {
 		login.enterPassword(password_re);
 		HomePage home1= new HomePage(driver);
 		HomePage home_2=login.clickOnLoginButton();
-		home.clickOnEndTour();
+		//home.clickOnEndTour();
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
-		String actual_user=home1.getLoggedUser();
-		String expected_user=username_re;
+		String actual_user=home_2.getLoggedUser();
+		String expected_user="Welcome "+firstName+",";
 		Assert.assertEquals(actual_user, expected_user,Messages.RELOGIN_FAILED);
 		
         

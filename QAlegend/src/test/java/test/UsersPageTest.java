@@ -12,9 +12,9 @@ import org.testng.annotations.Test;
 
 import pages.HomePage;
 import pages.LoginPage;
-import pages.ManageUserPage;
+import pages.UsersPage;
 
-public class ManageUserPageTest extends Base{
+public class UsersPageTest extends Base{
 	@Test
 	public void verifyManageUserTittle() throws IOException {
 		String username=ExcelUtility.readStringData(0, 1, Constants.LOGIN_PAGE_DATA);
@@ -27,8 +27,8 @@ public class ManageUserPageTest extends Base{
 		home.clickOnEndTour();
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 		home.clickOnUserManagement();
-		ManageUserPage manage=home.clickOnUsers();
-		ManageUserPage manageuser= new ManageUserPage(driver);
+		UsersPage manage=home.clickOnUsers();
+		UsersPage manageuser= new UsersPage(driver);
 		String title_actual=manageuser.getTittle();
 		String title_expected=ExcelUtility.readStringData(0, 0, Constants.MANAGE_USER_DATA);
 		Assert.assertEquals(title_actual, title_expected,Messages.TITTLE_MISMATCH);
