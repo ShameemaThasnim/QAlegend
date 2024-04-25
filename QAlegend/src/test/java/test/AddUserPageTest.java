@@ -10,7 +10,7 @@ import org.qalegend.automation_core.Base;
 import org.qalegend.constants.Constants;
 import org.qalegend.constants.Messages;
 import org.qalegend.utilities.ExcelUtility;
-import org.selenium.utilities.RandomDataUtility;
+import org.qalegend.utilities.RandomDataUtility;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
