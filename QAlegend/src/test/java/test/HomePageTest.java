@@ -29,7 +29,7 @@ public class HomePageTest extends Base{
 	@Test
 	public void verifyUserLoginDate() throws IOException{
 		String username=ExcelUtility.readStringData(0, 1, Constants.LOGIN_PAGE_DATA);
-		String password=ExcelUtility.readStringData(0, 2, Constants.LOGIN_PAGE_DATA)+"123";
+		String password=ExcelUtility.readStringData(0, 2, Constants.LOGIN_PAGE_DATA);
 		LoginPage login= new LoginPage(driver);
 		login.enterUserName(username);
 		login.enterPassword(password);
