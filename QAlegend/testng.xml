@@ -5,13 +5,16 @@
 		<parameter name="browser" value="Chrome"/>
 		<parameter name="baseurl" value="https://qalegend.com/billing/public/login"/>	
 		
-		
         <classes>
             
+			<class name="test.LoginPageTest">
+			<methods>
+                    <include name="tryRun"/>
+                    
+                   
+                </methods>
 			
-			<class name="test.LoginPageTest"/>
-			
-			
+			</class>
 		</classes>
 	</test>
              

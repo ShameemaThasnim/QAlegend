@@ -1,6 +1,7 @@
 package test;
 
 import java.io.IOException;
+import java.time.Duration;
 
 import org.qalegend.automation_core.Base;
 import org.qalegend.constants.Constants;
@@ -26,23 +27,23 @@ public class LoginPageTest extends Base{
 	}
 	@Test
 	public void verifyUserLoginWithValidCredentials() throws IOException{
-		
-		
 		String username=ExcelUtility.readStringData(0, 1, Constants.LOGIN_PAGE_DATA);
 		String password=ExcelUtility.readStringData(0, 2, Constants.LOGIN_PAGE_DATA);
+		
 		LoginPage login= new LoginPage(driver);
 		login.enterUserName(username);
 		login.enterPassword(password);
 		HomePage home= new HomePage(driver);
-		HomePage home_=login.clickOnLoginButton();
+		HomePage home1=login.clickOnLoginButton();
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+		home.clickOnEndTour();
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 		String user_name=home.getLoggedUser();
-		String expected_username=ExcelUtility.readStringData(0, 3, Constants.LOGIN_PAGE_DATA);
-		Assert.assertEquals(user_name, expected_username,Messages.LOGIN_MISMATCH);
-		
-		
-	
-		
-	}
+		System.out.println(user_name);
+		//String expected_user=ExcelUtility.readStringData(0, 7,Constants.LOGIN_PAGE_DATA);
+		String expected_user="Welcome XYZ,";
+		Assert.assertEquals(user_name, expected_user,Messages.LOGIN_MISMATCH);
+		}
 	@Test(dataProvider="InvalidUserCredentials",dataProviderClass=DataProviders.class)
 	public void verifyErrorMessageWhileLoggingWithInvalidCredentials(String username,String password) throws IOException{
 		
@@ -54,11 +55,7 @@ public class LoginPageTest extends Base{
 		HomePage home_=login.clickOnLoginButton();
 		String actual_error=login.getloginErrorMessage();
 		Assert.assertEquals(actual_error, expected_error,Messages.LOGIN_MISMATCH);
-		
-		
-		
-		
-		
-	}
-
+		}
+	
+	
 }

@@ -37,7 +37,14 @@ public static void scrollAndClick(WebDriver driver,WebElement element) {
 		js.executeScript("window.scrollBy(0,"+x+")");
 		x=x+2;
 	}
+	
 }
+public static boolean isElementEnabled(WebElement element)
+{
+	boolean status=element.isEnabled();
+	return status;
+}
+
 
 
 }

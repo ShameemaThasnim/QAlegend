@@ -8,4 +8,5 @@ public class Messages {
 	public static final String LOGIN_DATE_FAILED="invalid login date";
 	public static final String USER_CREATION_FAILED="invalid user";
 	public static final String RELOGIN_FAILED="invalid user relogin";
+	public static final String USER_MANAGEMENT_OPTION_STATUS="option not enabled";
 }

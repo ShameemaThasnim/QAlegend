@@ -15,8 +15,6 @@ public class HomePage {
 		
 	}
 	
-	@FindBy(xpath = "//a[@class='dropdown-toggle']//span")
-	WebElement logined_user;
 	@FindBy (xpath ="//section[@class='content-header']//h1")
 	WebElement welcome_user;
 	@FindBy(xpath ="//span[@class='title']")
@@ -25,8 +23,6 @@ public class HomePage {
 	WebElement login_Date;
 	@FindBy (xpath ="/html/body/div[2]/aside/section/ul/li[2]/ul/li[1]/a/span")
 	WebElement users;
-	//@FindBy (xpath ="//li[@class='active active-sub']")
-	//WebElement users;
 	@FindBy (xpath ="//button[@class='btn btn-default btn-sm']")
 	WebElement endtour;
 	
