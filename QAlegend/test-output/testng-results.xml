@@ -1,13 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="5" passed="5" failed="0" skipped="0">
+<testng-results ignored="0" total="2" passed="1" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-04-26T14:42:54 IST" name="Functional Suite" finished-at="2024-04-26T14:44:06 IST" duration-ms="71643">
+  <suite started-at="2024-04-27T22:23:15 IST" name="Functional Suite" finished-at="2024-04-27T22:23:34 IST" duration-ms="19604">
     <groups>
+      <group name="Regression">
+        <method signature="LoginPageTest.verifyLoginPageTittle()[pri:1, instance:test.LoginPageTest@6302bbb1]" name="verifyLoginPageTittle" class="test.LoginPageTest"/>
+        <method signature="LoginPageTest.verifyUserLoginWithValidCredentials()[pri:2, instance:test.LoginPageTest@6302bbb1]" name="verifyUserLoginWithValidCredentials" class="test.LoginPageTest"/>
+      </group> <!-- Regression -->
     </groups>
-    <test started-at="2024-04-26T14:42:54 IST" name="Test" finished-at="2024-04-26T14:44:06 IST" duration-ms="71643">
+    <test started-at="2024-04-27T22:23:15 IST" name="Regression Test" finished-at="2024-04-27T22:23:34 IST" duration-ms="19604">
       <class name="test.LoginPageTest">
-        <test-method is-config="true" signature="setup(java.lang.String,java.lang.String)[pri:0, instance:test.LoginPageTest@4c371370]" started-at="2024-04-26T14:42:54 IST" name="setup" finished-at="2024-04-26T14:43:12 IST" duration-ms="17589" status="PASS">
+        <test-method is-config="true" signature="setup(java.lang.String,java.lang.String)[pri:0, instance:test.LoginPageTest@6302bbb1]" started-at="2024-04-27T22:23:15 IST" name="setup" finished-at="2024-04-27T22:23:23 IST" duration-ms="8078" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -23,151 +27,11 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="verifyErrorMessageWhileLoggingWithInvalidCredentials(java.lang.String,java.lang.String)[pri:0, instance:test.LoginPageTest@4c371370]" started-at="2024-04-26T14:43:12 IST" name="verifyErrorMessageWhileLoggingWithInvalidCredentials" data-provider="InvalidUserCredentials" finished-at="2024-04-26T14:43:14 IST" duration-ms="2219" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[admim]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[123456]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verifyErrorMessageWhileLoggingWithInvalidCredentials -->
-        <test-method is-config="true" signature="closeBrowser(org.testng.ITestResult)[pri:0, instance:test.LoginPageTest@4c371370]" started-at="2024-04-26T14:43:14 IST" name="closeBrowser" finished-at="2024-04-26T14:43:14 IST" duration-ms="207" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=verifyErrorMessageWhileLoggingWithInvalidCredentials status=SUCCESS method=LoginPageTest.verifyErrorMessageWhileLoggingWithInvalidCredentials(java.lang.String,java.lang.String)[pri:0, instance:test.LoginPageTest@4c371370] output={null}]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- closeBrowser -->
-        <test-method is-config="true" signature="setup(java.lang.String,java.lang.String)[pri:0, instance:test.LoginPageTest@4c371370]" started-at="2024-04-26T14:43:14 IST" name="setup" finished-at="2024-04-26T14:43:26 IST" duration-ms="11980" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[Chrome]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[https://qalegend.com/billing/public/login]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setup -->
-        <test-method signature="verifyErrorMessageWhileLoggingWithInvalidCredentials(java.lang.String,java.lang.String)[pri:0, instance:test.LoginPageTest@4c371370]" started-at="2024-04-26T14:43:26 IST" name="verifyErrorMessageWhileLoggingWithInvalidCredentials" data-provider="InvalidUserCredentials" finished-at="2024-04-26T14:43:27 IST" duration-ms="1138" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[admin]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[123459]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verifyErrorMessageWhileLoggingWithInvalidCredentials -->
-        <test-method is-config="true" signature="closeBrowser(org.testng.ITestResult)[pri:0, instance:test.LoginPageTest@4c371370]" started-at="2024-04-26T14:43:27 IST" name="closeBrowser" finished-at="2024-04-26T14:43:28 IST" duration-ms="170" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=verifyErrorMessageWhileLoggingWithInvalidCredentials status=SUCCESS method=LoginPageTest.verifyErrorMessageWhileLoggingWithInvalidCredentials(java.lang.String,java.lang.String)[pri:0, instance:test.LoginPageTest@4c371370] output={null}]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- closeBrowser -->
-        <test-method is-config="true" signature="setup(java.lang.String,java.lang.String)[pri:0, instance:test.LoginPageTest@4c371370]" started-at="2024-04-26T14:43:28 IST" name="setup" finished-at="2024-04-26T14:43:38 IST" duration-ms="10758" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[Chrome]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[https://qalegend.com/billing/public/login]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setup -->
-        <test-method signature="verifyErrorMessageWhileLoggingWithInvalidCredentials(java.lang.String,java.lang.String)[pri:0, instance:test.LoginPageTest@4c371370]" started-at="2024-04-26T14:43:38 IST" name="verifyErrorMessageWhileLoggingWithInvalidCredentials" data-provider="InvalidUserCredentials" finished-at="2024-04-26T14:43:40 IST" duration-ms="1282" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[admio]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[123456]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verifyErrorMessageWhileLoggingWithInvalidCredentials -->
-        <test-method is-config="true" signature="closeBrowser(org.testng.ITestResult)[pri:0, instance:test.LoginPageTest@4c371370]" started-at="2024-04-26T14:43:40 IST" name="closeBrowser" finished-at="2024-04-26T14:43:40 IST" duration-ms="250" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=verifyErrorMessageWhileLoggingWithInvalidCredentials status=SUCCESS method=LoginPageTest.verifyErrorMessageWhileLoggingWithInvalidCredentials(java.lang.String,java.lang.String)[pri:0, instance:test.LoginPageTest@4c371370] output={null}]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- closeBrowser -->
-        <test-method is-config="true" signature="setup(java.lang.String,java.lang.String)[pri:0, instance:test.LoginPageTest@4c371370]" started-at="2024-04-26T14:43:40 IST" name="setup" finished-at="2024-04-26T14:43:52 IST" duration-ms="11906" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[Chrome]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[https://qalegend.com/billing/public/login]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setup -->
-        <test-method signature="verifyLoginPageTittle()[pri:0, instance:test.LoginPageTest@4c371370]" started-at="2024-04-26T14:43:52 IST" name="verifyLoginPageTittle" finished-at="2024-04-26T14:43:52 IST" duration-ms="84" status="PASS">
+        <test-method signature="verifyLoginPageTittle()[pri:1, instance:test.LoginPageTest@6302bbb1]" started-at="2024-04-27T22:23:23 IST" name="verifyLoginPageTittle" finished-at="2024-04-27T22:23:24 IST" duration-ms="1238" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyLoginPageTittle -->
-        <test-method is-config="true" signature="closeBrowser(org.testng.ITestResult)[pri:0, instance:test.LoginPageTest@4c371370]" started-at="2024-04-26T14:43:52 IST" name="closeBrowser" finished-at="2024-04-26T14:43:52 IST" duration-ms="193" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=verifyLoginPageTittle status=SUCCESS method=LoginPageTest.verifyLoginPageTittle()[pri:0, instance:test.LoginPageTest@4c371370] output={null}]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- closeBrowser -->
-        <test-method is-config="true" signature="setup(java.lang.String,java.lang.String)[pri:0, instance:test.LoginPageTest@4c371370]" started-at="2024-04-26T14:43:52 IST" name="setup" finished-at="2024-04-26T14:44:02 IST" duration-ms="10339" status="PASS">
+        <test-method is-config="true" signature="setup(java.lang.String,java.lang.String)[pri:0, instance:test.LoginPageTest@6302bbb1]" started-at="2024-04-27T22:23:24 IST" name="setup" finished-at="2024-04-27T22:23:31 IST" duration-ms="6928" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -183,22 +47,50 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="verifyUserLoginWithValidCredentials()[pri:0, instance:test.LoginPageTest@4c371370]" started-at="2024-04-26T14:44:02 IST" name="verifyUserLoginWithValidCredentials" finished-at="2024-04-26T14:44:06 IST" duration-ms="3256" status="PASS">
+        <test-method signature="verifyUserLoginWithValidCredentials()[pri:2, instance:test.LoginPageTest@6302bbb1]" started-at="2024-04-27T22:23:31 IST" name="verifyUserLoginWithValidCredentials" finished-at="2024-04-27T22:23:34 IST" duration-ms="3186" status="FAIL">
+          <exception class="java.lang.NullPointerException">
+            <message>
+              <![CDATA[Cannot invoke "org.apache.poi.ss.usermodel.Cell.getStringCellValue()" because "c" is null]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.NullPointerException: Cannot invoke "org.apache.poi.ss.usermodel.Cell.getStringCellValue()" because "c" is null
+at org.qalegend.utilities.ExcelUtility.readStringData(ExcelUtility.java:27)
+at test.LoginPageTest.verifyUserLoginWithValidCredentials(LoginPageTest.java:42)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:848)
+at org.testng.TestRunner.run(TestRunner.java:621)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1280)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1200)
+at org.testng.TestNG.runSuites(TestNG.java:1114)
+at org.testng.TestNG.run(TestNG.java:1082)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.NullPointerException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyUserLoginWithValidCredentials -->
-        <test-method is-config="true" signature="closeBrowser(org.testng.ITestResult)[pri:0, instance:test.LoginPageTest@4c371370]" started-at="2024-04-26T14:44:06 IST" name="closeBrowser" finished-at="2024-04-26T14:44:06 IST" duration-ms="145" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=verifyUserLoginWithValidCredentials status=SUCCESS method=LoginPageTest.verifyUserLoginWithValidCredentials()[pri:0, instance:test.LoginPageTest@4c371370] output={null}]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- closeBrowser -->
       </class> <!-- test.LoginPageTest -->
-    </test> <!-- Test -->
+    </test> <!-- Regression Test -->
   </suite> <!-- Functional Suite -->
 </testng-results>
