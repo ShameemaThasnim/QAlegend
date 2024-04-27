@@ -13,7 +13,7 @@ import pages.HomePage;
 import pages.LoginPage;
 
 public class HomePageTest extends Base{
-	@Test
+	@Test(priority=6,groups="Regression")
 	public void verifyHomePageTittle() throws IOException {
 		String username=ExcelUtility.readStringData(0, 1, Constants.LOGIN_PAGE_DATA);
 		String password=ExcelUtility.readStringData(0, 2, Constants.LOGIN_PAGE_DATA);
@@ -26,7 +26,7 @@ public class HomePageTest extends Base{
 		String expected_tittle=ExcelUtility.readStringData(0, 0, Constants.HOME_PAGE_DATA);
 		Assert.assertEquals(actual_tittle, expected_tittle,Messages.TITTLE_MISMATCH);
 	   }
-	@Test
+	@Test(priority=7,groups={"Regression","Smoke"})
 	public void verifyUserLoginDate() throws IOException{
 		String username=ExcelUtility.readStringData(0, 1, Constants.LOGIN_PAGE_DATA);
 		String password=ExcelUtility.readStringData(0, 2, Constants.LOGIN_PAGE_DATA);

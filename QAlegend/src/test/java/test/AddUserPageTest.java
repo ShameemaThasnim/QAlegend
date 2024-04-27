@@ -14,13 +14,14 @@ import org.qalegend.utilities.RandomDataUtility;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
+import listeners.RetryAnalyser;
 import pages.AddUserPage;
 import pages.HomePage;
 import pages.LoginPage;
 import pages.UsersPage;
 
 public class AddUserPageTest extends Base {
-	@Test
+	@Test(priority=9,groups="Sanity")
 	public void verifyAddUserTittle() throws IOException {
 		String username=ExcelUtility.readStringData(0, 1, Constants.LOGIN_PAGE_DATA);
 		String password=ExcelUtility.readStringData(0, 2, Constants.LOGIN_PAGE_DATA);
@@ -43,7 +44,7 @@ public class AddUserPageTest extends Base {
 		
 		
 	}
-	@Test
+	@Test(priority=10,groups="Regression",retryAnalyzer= RetryAnalyser.class)
 public void verifyAddUser() throws IOException {
 		String username=ExcelUtility.readStringData(0, 1, Constants.LOGIN_PAGE_DATA);
 		String password=ExcelUtility.readStringData(0, 2, Constants.LOGIN_PAGE_DATA);
@@ -82,7 +83,7 @@ public void verifyAddUser() throws IOException {
 		
 		Assert.assertEquals(actual_user, user_name,Messages.USER_CREATION_FAILED);
 		}
-	@Test
+	@Test(priority=11,groups="Sanity",retryAnalyzer= RetryAnalyser.class)
 	public void verifyUserLoginWithNewlyAddedUser() throws IOException {
 		String username=ExcelUtility.readStringData(0, 1, Constants.LOGIN_PAGE_DATA);
 		String password=ExcelUtility.readStringData(0, 2, Constants.LOGIN_PAGE_DATA);

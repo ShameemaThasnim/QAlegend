@@ -14,7 +14,7 @@ import pages.LoginPage;
 import pages.ResetPage;
 
 public class ResetPageTest extends Base{
-	@Test
+	@Test(priority=4,groups="Regression")
 	public void verifyResetPageTittle() throws IOException{
 		
 		
@@ -25,7 +25,7 @@ public class ResetPageTest extends Base{
 		Assert.assertEquals(actual_tittle, expected_tittle,Messages.TITTLE_MISMATCH);
 		
 	}
-	@Test
+	@Test(priority=5,groups="Regression")
 	public void verifyErrorMessageWithInvalidEmailid() throws IOException{
 		
 		

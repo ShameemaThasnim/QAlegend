@@ -15,7 +15,7 @@ import pages.HomePage;
 import pages.LoginPage;
 
 public class LoginPageTest extends Base{
-	@Test
+	@Test(priority=1,groups="Regression")
 	
 	public void verifyLoginPageTittle() throws IOException{
 		
@@ -25,7 +25,7 @@ public class LoginPageTest extends Base{
 		
 		
 	}
-	@Test
+	@Test(priority=2,groups="Regression")
 	public void verifyUserLoginWithValidCredentials() throws IOException{
 		String username=ExcelUtility.readStringData(0, 1, Constants.LOGIN_PAGE_DATA);
 		String password=ExcelUtility.readStringData(0, 2, Constants.LOGIN_PAGE_DATA);
@@ -44,7 +44,7 @@ public class LoginPageTest extends Base{
 		String expected_user="Welcome XYZ,";
 		Assert.assertEquals(user_name, expected_user,Messages.LOGIN_MISMATCH);
 		}
-	@Test(dataProvider="InvalidUserCredentials",dataProviderClass=DataProviders.class)
+	@Test(priority=3,groups="Smoke",dataProvider="InvalidUserCredentials",dataProviderClass=DataProviders.class)
 	public void verifyErrorMessageWhileLoggingWithInvalidCredentials(String username,String password) throws IOException{
 		
 		String expected_error=ExcelUtility.readStringData(1, 0, Constants.LOGIN_PAGE_DATA);
