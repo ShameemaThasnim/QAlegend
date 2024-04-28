@@ -9,7 +9,7 @@
             
 			<class name="test.LoginPageTest">
 			<methods>
-                    <include name="tryRun"/>
+                    <include name="verifyUserLoginWithValidCredentials"/>
                     
                    
                 </methods>

@@ -39,8 +39,8 @@ public class LoginPageTest extends Base{
 		home.clickOnEndTour();
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 		String user_name=home.getLoggedUser();
-		String expected_user=ExcelUtility.readStringData(0, 7,Constants.LOGIN_PAGE_DATA);
-		//String expected_user="Welcome XYZ,";
+		//String expected_user=ExcelUtility.readStringData(0, 7,Constants.LOGIN_PAGE_DATA);
+		String expected_user="Welcome XYZ,";
 		Assert.assertEquals(user_name, expected_user,Messages.LOGIN_MISMATCH);
 		}
 	@Test(priority=3,groups="Smoke",dataProvider="InvalidUserCredentials",dataProviderClass=DataProviders.class)
