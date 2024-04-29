@@ -15,7 +15,8 @@ import pages.ResetPage;
 
 public class ResetPageTest extends Base{
 	@Test(priority=4,groups="Regression")
-	public void verifyResetPageTittle() throws IOException{
+	public void verifyResetPageTittle() 
+	{
 		
 		
 		LoginPage login= new LoginPage(driver);
@@ -26,7 +27,8 @@ public class ResetPageTest extends Base{
 		
 	}
 	@Test(priority=5,groups="Regression")
-	public void verifyErrorMessageWithInvalidEmailid() throws IOException{
+	public void verifyErrorMessageWithInvalidEmailid() 
+	{
 		
 		
 		  LoginPage login= new LoginPage(driver);

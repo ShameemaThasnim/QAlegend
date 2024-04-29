@@ -17,7 +17,8 @@ import pages.LoginPage;
 public class LoginPageTest extends Base{
 	@Test(priority=1,groups="Regression")
 	
-	public void verifyLoginPageTittle() throws IOException{
+	public void verifyLoginPageTittle() 
+	{
 		
 		String actual_tittle=driver.getTitle();
 		String expected_tittle=ExcelUtility.readStringData(0, 0, Constants.LOGIN_PAGE_DATA);
@@ -26,7 +27,8 @@ public class LoginPageTest extends Base{
 		
 	}
 	@Test(priority=2,groups="Regression")
-	public void verifyUserLoginWithValidCredentials() throws IOException{
+	public void verifyUserLoginWithValidCredentials() 
+	{
 		String username=ExcelUtility.readStringData(0, 1, Constants.LOGIN_PAGE_DATA);
 		String password=ExcelUtility.readStringData(0, 2, Constants.LOGIN_PAGE_DATA);
 		
@@ -39,18 +41,17 @@ public class LoginPageTest extends Base{
 		home.clickOnEndTour();
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 		String user_name=home.getLoggedUser();
-		//String expected_user=ExcelUtility.readStringData(0, 7,Constants.LOGIN_PAGE_DATA);
-		String expected_user="Welcome XYZ,";
+		String expected_user=ExcelUtility.readStringData(7, 0, Constants.LOGIN_PAGE_DATA);
 		Assert.assertEquals(user_name, expected_user,Messages.LOGIN_MISMATCH);
 		}
 	@Test(priority=3,groups="Smoke",dataProvider="InvalidUserCredentials",dataProviderClass=DataProviders.class)
-	public void verifyErrorMessageWhileLoggingWithInvalidCredentials(String username,String password) throws IOException{
+	public void verifyErrorMessageWhileLoggingWithInvalidCredentials(String username,String password) 
+	{
 		
 		String expected_error=ExcelUtility.readStringData(1, 0, Constants.LOGIN_PAGE_DATA);
 		LoginPage login= new LoginPage(driver);
 		login.enterUserName(username);
 		login.enterPassword(password);
-		//HomePage home= new HomePage(driver);
 		HomePage home_=login.clickOnLoginButton();
 		String actual_error=login.getloginErrorMessage();
 		Assert.assertEquals(actual_error, expected_error,Messages.LOGIN_MISMATCH);

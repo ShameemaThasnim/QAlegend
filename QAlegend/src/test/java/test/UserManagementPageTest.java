@@ -16,7 +16,8 @@ import pages.UserManagementPage;
 
 public class UserManagementPageTest extends Base{
 	@Test(priority=12,groups="Regression")
-	public void verifyUserManagementOPtionUsers() throws IOException{
+	public void verifyUserManagementOPtionUsers() 
+	{
 	String username=ExcelUtility.readStringData(0, 1, Constants.LOGIN_PAGE_DATA);
 	String password=ExcelUtility.readStringData(0, 2, Constants.LOGIN_PAGE_DATA);
 	LoginPage login= new LoginPage(driver);
@@ -32,7 +33,8 @@ public class UserManagementPageTest extends Base{
 	Assert.assertTrue(user_status, Messages.USER_MANAGEMENT_OPTION_STATUS);
 	}
 	@Test(priority=13,groups="Regression")
-	public void verifyUserManagementOPtionRoles() throws IOException{
+	public void verifyUserManagementOPtionRoles() 
+	{
 		String username=ExcelUtility.readStringData(0, 1, Constants.LOGIN_PAGE_DATA);
 		String password=ExcelUtility.readStringData(0, 2, Constants.LOGIN_PAGE_DATA);
 		LoginPage login= new LoginPage(driver);
@@ -48,7 +50,8 @@ public class UserManagementPageTest extends Base{
 		Assert.assertTrue(roles_status, Messages.USER_MANAGEMENT_OPTION_STATUS);
 		}
 	@Test(priority=14,groups="Sanity")
-	public void verifyUserManagementOPtionSales() throws IOException{
+	public void verifyUserManagementOPtionSales() 
+	{
 		String username=ExcelUtility.readStringData(0, 1, Constants.LOGIN_PAGE_DATA);
 		String password=ExcelUtility.readStringData(0, 2, Constants.LOGIN_PAGE_DATA);
 		LoginPage login= new LoginPage(driver);

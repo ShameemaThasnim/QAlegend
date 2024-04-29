@@ -16,7 +16,8 @@ import pages.UsersPage;
 
 public class UsersPageTest extends Base{
 	@Test(priority=8,groups="Smoke")
-	public void verifyManageUserTittle() throws IOException {
+	public void verifyManageUserTittle() 
+	{
 		String username=ExcelUtility.readStringData(0, 1, Constants.LOGIN_PAGE_DATA);
 		String password=ExcelUtility.readStringData(0, 2, Constants.LOGIN_PAGE_DATA);
 		LoginPage login= new LoginPage(driver);

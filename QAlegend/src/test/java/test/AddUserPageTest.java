@@ -22,7 +22,8 @@ import pages.UsersPage;
 
 public class AddUserPageTest extends Base {
 	@Test(priority=9,groups="Sanity")
-	public void verifyAddUserTittle() throws IOException {
+	public void verifyAddUserTittle() 
+	{
 		String username=ExcelUtility.readStringData(0, 1, Constants.LOGIN_PAGE_DATA);
 		String password=ExcelUtility.readStringData(0, 2, Constants.LOGIN_PAGE_DATA);
 		LoginPage login= new LoginPage(driver);
@@ -45,7 +46,8 @@ public class AddUserPageTest extends Base {
 		
 	}
 	@Test(priority=10,groups="Regression",retryAnalyzer= RetryAnalyser.class)
-public void verifyAddUser() throws IOException {
+public void verifyAddUser()
+	{
 		String username=ExcelUtility.readStringData(0, 1, Constants.LOGIN_PAGE_DATA);
 		String password=ExcelUtility.readStringData(0, 2, Constants.LOGIN_PAGE_DATA);
 		LoginPage login= new LoginPage(driver);
@@ -84,7 +86,8 @@ public void verifyAddUser() throws IOException {
 		Assert.assertEquals(actual_user, user_name,Messages.USER_CREATION_FAILED);
 		}
 	@Test(priority=11,groups="Sanity",retryAnalyzer= RetryAnalyser.class)
-	public void verifyUserLoginWithNewlyAddedUser() throws IOException {
+	public void verifyUserLoginWithNewlyAddedUser() 
+	{
 		String username=ExcelUtility.readStringData(0, 1, Constants.LOGIN_PAGE_DATA);
 		String password=ExcelUtility.readStringData(0, 2, Constants.LOGIN_PAGE_DATA);
 		LoginPage login= new LoginPage(driver);
@@ -100,13 +103,11 @@ public void verifyAddUser() throws IOException {
 		AddUserPage adduser=manageuser.clickOnAddButton();
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 		AddUserPage add_user= new AddUserPage(driver);
-		//String prefix=ExcelUtility.readStringData(0, 0, Constants.ADD_USER_DATA);
 		String firstName= RandomDataUtility.getFirstName();
 		String lastname= RandomDataUtility.getLastName();
 		String email= firstName+"."+lastname+"123@gmail.com";
 		String pass_word=firstName+"."+lastname;
 		String user_name=firstName;
-		//add_user.enterPrefix(prefix);
 		add_user.enterFirstName(firstName);
 		add_user.enterLastName(lastname);
 		add_user.enterEmail(email);
@@ -124,7 +125,6 @@ public void verifyAddUser() throws IOException {
 		login.enterPassword(password_re);
 		HomePage home1= new HomePage(driver);
 		HomePage home_2=login.clickOnLoginButton();
-		//home.clickOnEndTour();
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 		String actual_user=home_2.getLoggedUser();
 		String expected_user="Welcome "+firstName+",";
