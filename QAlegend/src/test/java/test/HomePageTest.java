@@ -24,7 +24,7 @@ public class HomePageTest extends Base{
 		HomePage home= new HomePage(driver);
 		HomePage home_=login.clickOnLoginButton();
 		String actual_tittle=home.getTittle();
-		String expected_tittle=ExcelUtility.readStringData(0, 0, Constants.HOME_PAGE_DATA);
+		String expected_tittle=ExcelUtility.readStringData(0, 0, Constants.HOME_PAGE_DATA)+"123";
 		Assert.assertEquals(actual_tittle, expected_tittle,Messages.TITTLE_MISMATCH);
 	   }
 	@Test(priority=7,groups={"Regression","Smoke"})
