@@ -13,9 +13,9 @@ import org.qalegend.constants.Constants;
 
 public class ExcelUtility {
 	
-	 static FileInputStream f;//file read
-	  static XSSFWorkbook w;//workbook read
-	  static XSSFSheet s;//sheet read
+	 static FileInputStream f;
+	  static XSSFWorkbook w;
+	  static XSSFSheet s;
 		
 
 	public static String readStringData(int row, int column, String sheetname) 

@@ -15,7 +15,7 @@ public class WaitUtility {
 	
 	
 	public static void waitUsingImplicitWait(WebDriver driver) {
-		//driver.manage().timeouts().implicitlyWait(IMPLICIT_WAIT, TimeUnit.SECONDS);
+		
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(IMPLICIT_WAIT));
 		
 	}

@@ -44,7 +44,7 @@ public class UsersPage {
 		
 	}
 	public void clickOnUserName() {
-		//WebElementUtility.clickOnElement(logined_user);
+		
 		WebElementUtility.scrollAndClick(driver, logined_user);
 	}
 	public LoginPage clickOnLogOut() {

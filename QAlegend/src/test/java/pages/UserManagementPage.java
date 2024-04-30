@@ -23,7 +23,7 @@ public class UserManagementPage {
 	WebElement user;
 	@FindBy(xpath = "//span[@class='title' and contains(text(),'Roles')]")
 	WebElement roles;
-	//ul[@class='treeview-menu menu-open']//span[@class='title'])[2]
+	
 	@FindBy(xpath = "//span[@class='title' and contains(text(),'Sales Commission Agents')]")
 	WebElement sales_commission_agents;
 	
