@@ -8,13 +8,13 @@
     <parameter name="baseurl" value="https://qalegend.com/billing/public/login"/>
     <parameter name="browser" value="Chrome"/>
     <classes>
-      <class name="test.AddUserPageTest">
+      <class name="test.HomePageTest">
         <methods>
           <include name="closeBrowser"/>
           <include name="setup"/>
-          <include name="verifyAddUser"/>
+          <include name="verifyHomePageTittle"/>
         </methods>
-      </class> <!-- test.AddUserPageTest -->
+      </class> <!-- test.HomePageTest -->
     </classes>
   </test> <!-- Report Test(failed) -->
 </suite> <!-- Failed suite [Functional Suite] -->
