@@ -7,6 +7,7 @@ import org.qalegend.automation_core.Base;
 import org.qalegend.constants.Constants;
 import org.qalegend.constants.Messages;
 import org.qalegend.utilities.ExcelUtility;
+import org.qalegend.utilities.WaitUtility;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
@@ -26,7 +27,7 @@ public class UsersPageTest extends Base{
 		HomePage home= new HomePage(driver);
 		HomePage home_=login.clickOnLoginButton();
 		home.clickOnEndTour();
-		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+		WaitUtility.waitUsingImplicitWait(driver);
 		home.clickOnUserManagement();
 		UsersPage manage=home.clickOnUsers();
 		UsersPage manageuser= new UsersPage(driver);

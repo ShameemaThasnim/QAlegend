@@ -7,6 +7,7 @@ import org.qalegend.automation_core.Base;
 import org.qalegend.constants.Constants;
 import org.qalegend.constants.Messages;
 import org.qalegend.utilities.ExcelUtility;
+import org.qalegend.utilities.WaitUtility;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
@@ -37,9 +38,9 @@ public class LoginPageTest extends Base{
 		login.enterPassword(password);
 		HomePage home= new HomePage(driver);
 		HomePage home1=login.clickOnLoginButton();
-		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+		WaitUtility.waitUsingImplicitWait(driver);
 		home.clickOnEndTour();
-		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+		WaitUtility.waitUsingImplicitWait(driver);
 		String user_name=home.getLoggedUser();
 		String expected_user=ExcelUtility.readStringData(7, 0, Constants.LOGIN_PAGE_DATA);
 		Assert.assertEquals(user_name, expected_user,Messages.LOGIN_MISMATCH);

@@ -7,6 +7,7 @@ import org.qalegend.automation_core.Base;
 import org.qalegend.constants.Constants;
 import org.qalegend.constants.Messages;
 import org.qalegend.utilities.ExcelUtility;
+import org.qalegend.utilities.WaitUtility;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
@@ -26,7 +27,7 @@ public class UserManagementPageTest extends Base{
 	HomePage home= new HomePage(driver);
 	HomePage home_=login.clickOnLoginButton();
 	home.clickOnEndTour();
-	driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+	WaitUtility.waitUsingImplicitWait(driver);
 	home.clickOnUserManagement();
 	UserManagementPage usermanagementpage_obj= new UserManagementPage(driver);
 	boolean user_status=usermanagementpage_obj.isUserEnable();
@@ -43,7 +44,7 @@ public class UserManagementPageTest extends Base{
 		HomePage home= new HomePage(driver);
 		HomePage home_=login.clickOnLoginButton();
 		home.clickOnEndTour();
-		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+		WaitUtility.waitUsingImplicitWait(driver);
 		home.clickOnUserManagement();
 		UserManagementPage usermanagementpage_obj= new UserManagementPage(driver);
 		boolean roles_status=usermanagementpage_obj.isRoleEnable();
@@ -60,7 +61,7 @@ public class UserManagementPageTest extends Base{
 		HomePage home= new HomePage(driver);
 		HomePage home_=login.clickOnLoginButton();
 		home.clickOnEndTour();
-		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+		WaitUtility.waitUsingImplicitWait(driver);
 		home.clickOnUserManagement();
 		UserManagementPage usermanagementpage_obj= new UserManagementPage(driver);
 		boolean sales_status=usermanagementpage_obj.isSaleEnable();
