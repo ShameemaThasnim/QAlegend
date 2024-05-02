@@ -20,12 +20,10 @@ public class LoginPageTest extends Base{
 	
 	public void verifyLoginPageTittle() 
 	{
-		
 		String actual_tittle=driver.getTitle();
 		String expected_tittle=ExcelUtility.readStringData(0, 0, Constants.LOGIN_PAGE_DATA);
 		Assert.assertEquals(actual_tittle, expected_tittle,Messages.TITTLE_MISMATCH);
-		
-		
+			
 	}
 	@Test(priority=2,groups="Regression")
 	public void verifyUserLoginWithValidCredentials() 

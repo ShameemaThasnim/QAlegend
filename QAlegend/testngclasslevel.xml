@@ -4,22 +4,13 @@
     <test name="Test">
 		<parameter name="browser" value="Chrome"/>
 		<parameter name="baseurl" value="https://qalegend.com/billing/public/login"/>	
-		
-		
-        <classes>
-            
-			
-			<class name="test.HomePageTest"/>
+		<classes>
+            <class name="test.HomePageTest"/>
 			<class name="test.ResetPageTest"/>
 			<class name="test.LoginPageTest"/>
 			<class name="test.UsersPageTest"/>
 			<class name="test.AddUserPageTest"/>
 			<class name="test.UserManagementPageTest"/>
-			
-			
 		</classes>
 	</test>
-             
-   
-            
 </suite>

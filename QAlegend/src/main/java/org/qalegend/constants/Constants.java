@@ -8,6 +8,4 @@ public class Constants {
 	public static final String HOME_PAGE_DATA= "HomePageData";
 	public static final String MANAGE_USER_DATA="ManageUserData";
 	public static final String ADD_USER_DATA="AddUserData";
-	
-
 }

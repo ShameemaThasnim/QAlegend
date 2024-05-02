@@ -15,13 +15,10 @@ public class ResetPage {
 		
 	}
 
-	
 	@FindBy(id = "email")
 	WebElement email_field;
 	@FindBy(xpath = "//button[@class='btn btn-primary']")
 	WebElement Resend_link;
-	
-	
 	@FindBy(xpath = "//span[@class='help-block']//strong")
 	WebElement email_error_message;
 	

@@ -4,20 +4,12 @@
     <test name="Test">
 		<parameter name="browser" value="Chrome"/>
 		<parameter name="baseurl" value="https://qalegend.com/billing/public/login"/>	
-		
-        <classes>
-            
-			<class name="test.LoginPageTest">
+		<classes>
+            <class name="test.LoginPageTest">
 			<methods>
                     <include name="verifyUserLoginWithValidCredentials"/>
-                    
-                   
-                </methods>
-			
+            </methods>
 			</class>
 		</classes>
 	</test>
-             
-   
-            
 </suite>

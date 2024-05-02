@@ -5,8 +5,6 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
 public class WebElementUtility {
-	
-	
 public static void clickOnElement(WebElement element) 
        {
 			element.click();
@@ -27,7 +25,6 @@ public static boolean isClicked(WebElement element) {
 	catch(Exception e){
 		return false;
 	}
-	
 }
 public static void scrollAndClick(WebDriver driver,WebElement element) {
 	JavascriptExecutor js = (JavascriptExecutor) driver;
@@ -37,14 +34,10 @@ public static void scrollAndClick(WebDriver driver,WebElement element) {
 		js.executeScript("window.scrollBy(0,"+x+")");
 		x=x+2;
 	}
-	
 }
 public static boolean isElementEnabled(WebElement element)
 {
 	boolean status=element.isEnabled();
 	return status;
 }
-
-
-
 }

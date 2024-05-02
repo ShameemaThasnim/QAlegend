@@ -11,7 +11,6 @@ public class AddUserPage {
 	public AddUserPage(WebDriver driver) {
 		this.driver= driver;
 		PageFactory.initElements(driver, this);
-		
 	}
 	@FindBy (id="surname")
 	WebElement surname;

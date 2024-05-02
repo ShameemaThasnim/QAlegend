@@ -21,7 +21,6 @@ public class UsersPage {
 	WebElement logined_user;
 	@FindBy(xpath = "//a[@class='btn btn-default btn-flat' and text()='Sign Out']")
 	WebElement log_out;
-	
 	@FindBy (xpath="//td[@class='sorting_1']")
 	WebElement search_row;
 	public String getTittle() {

@@ -4,15 +4,12 @@
   <artifactId>QAlegend</artifactId>
   <version>0.0.1-SNAPSHOT</version>
   <dependencies>
-
 <!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java -->
 <dependency>
     <groupId>org.seleniumhq.selenium</groupId>
     <artifactId>selenium-java</artifactId>
     <version>4.20.0</version>
 </dependency>
-
-
 <!-- https://mvnrepository.com/artifact/org.testng/testng -->
 <dependency>
     <groupId>org.testng</groupId>
@@ -26,7 +23,6 @@
     <artifactId>poi</artifactId>
     <version>4.1.2</version>
 </dependency>
-
 <!-- https://mvnrepository.com/artifact/org.apache.poi/poi-ooxml -->
 <dependency>
     <groupId>org.apache.poi</groupId>
@@ -40,10 +36,10 @@
     <version>2.15.0</version>
 </dependency>
 <dependency>
-            <groupId>com.aventstack</groupId>
-            <artifactId>extentreports</artifactId>
-            <version>3.0.0</version>
-            <scope>test</scope>
+    <groupId>com.aventstack</groupId>
+    <artifactId>extentreports</artifactId>
+    <version>3.0.0</version>
+    <scope>test</scope>
 </dependency>
 <!-- https://mvnrepository.com/artifact/com.github.javafaker/javafaker -->
 <dependency>
@@ -51,10 +47,7 @@
     <artifactId>javafaker</artifactId>
     <version>1.0.2</version>
 </dependency>
-
-
-  
-  </dependencies>
+</dependencies>
   <build>
         <plugins>
             <plugin>

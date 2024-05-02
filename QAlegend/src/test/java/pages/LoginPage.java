@@ -7,21 +7,16 @@ import org.openqa.selenium.support.PageFactory;
 import org.qalegend.utilities.WebElementUtility;
 
 public class LoginPage {
-	
-	
-		WebDriver driver;
+	    WebDriver driver;
 		public LoginPage(WebDriver driver) {
 			this.driver= driver;
 			PageFactory.initElements(driver, this);
-			
 		}
 
 		@FindBy(xpath = "//a[@class='btn btn-link']")
 		WebElement forgetPassword;
-		
 		@FindBy(xpath = "//span[@class='help-block']//strong")
 		WebElement login_error;
-		
 		@FindBy(xpath = "//input[@id='username']")
 		WebElement username;
 		@FindBy(xpath = "//input[@id='password']")

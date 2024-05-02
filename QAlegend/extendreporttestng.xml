@@ -15,11 +15,6 @@
             <class name="test.UsersPageTest"/>
             <class name="test.AddUserPageTest"/>
             <class name="test.UserManagementPageTest"/>
-        
-            
-           
-		</classes>
+        </classes>
 	</test>
-             
-    
 </suite>

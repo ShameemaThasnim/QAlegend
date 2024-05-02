@@ -1,22 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="Functional Suite">    
+<suite name="Functional Suite">  
 	<groups>
 		<run>
 			<include name="Regression"/>
+			<include name="Smoke"/>
+			<include name="Sanity"/>
 		</run>
-	</groups>     
-    <test name="Regression Test">
+	</groups>  
+	<listeners>
+		<listener class-name="listeners.Annotation_Transformer"/>
+	</listeners>   
+    <test name="All Test">
 		<parameter name="browser" value="Chrome"></parameter>
 		<parameter name="baseurl" value="https://qalegend.com/billing/public/login"/>
         <classes>
             <class name="test.HomePageTest"/>
             <class name="test.LoginPageTest"/>
             <class name="test.ResetPageTest"/>
-            
-           
-		</classes>
+        </classes>
 	</test>
-             
-    
 </suite>

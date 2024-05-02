@@ -11,18 +11,8 @@ public class WaitUtility {
 	
 	public static final long IMPLICIT_WAIT=10;
 	
-	
-	
-	
-	public static void waitUsingImplicitWait(WebDriver driver) {
+public static void waitUsingImplicitWait(WebDriver driver) {
 		
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(IMPLICIT_WAIT));
-		
-	}
-
-
-
-
-	
-
+		}
 }
