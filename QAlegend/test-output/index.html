@@ -25,7 +25,7 @@
       <span class="top-banner-title-font">Test results</span>
       <button id="button" class="button">Switch Retro Theme</button> <!-- button -->
       <br/>
-      <span class="top-banner-font-1">1 suite, 1 failed test</span>
+      <span class="top-banner-font-1">1 suite</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -39,7 +39,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" panel-name="suite-Functional_Suite" class="navigator-link">
-              <span class="suite-name border-failed">Functional Suite</span>
+              <span class="suite-name border-passed">Functional Suite</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -92,21 +92,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">16 methods, 1 failed,   15 passed</span>
-                  </li>
-                  <li>
-                    <span class="method-list-title failed">Failed methods</span>
-                    <span class="show-or-hide-methods failed">
-                      <a href="#" panel-name="suite-Functional_Suite" class="hide-methods failed suite-Functional_Suite"> (hide)</a> <!-- hide-methods failed suite-Functional_Suite -->
-                      <a href="#" panel-name="suite-Functional_Suite" class="show-methods failed suite-Functional_Suite"> (show)</a> <!-- show-methods failed suite-Functional_Suite -->
-                    </span>
-                    <div class="method-list-content failed suite-Functional_Suite">
-                      <span>
-                        <img src="failed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Functional_Suite" title="test.HomePageTest" class="method navigator-link" hash-for-method="verifyHomePageTittle">verifyHomePageTittle</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                    </div> <!-- method-list-content failed suite-Functional_Suite -->
+                    <span class="method-stats">16 methods,   16 passed</span>
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -127,12 +113,12 @@
                       <br/>
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Functional_Suite" title="test.LoginPageTest" class="method navigator-link" hash-for-method="verifyErrorMessageWhileLoggingWithInvalidCredentials(admim, 123456)">verifyErrorMessageWhileLoggingWithInvalidCredentials(admim, 123456)</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Functional_Suite" title="test.LoginPageTest" class="method navigator-link" hash-for-method="verifyErrorMessageWhileLoggingWithInvalidCredentials(admin, 123459)">verifyErrorMessageWhileLoggingWithInvalidCredentials(admin, 123459)</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Functional_Suite" title="test.LoginPageTest" class="method navigator-link" hash-for-method="verifyErrorMessageWhileLoggingWithInvalidCredentials(admin, 123459)">verifyErrorMessageWhileLoggingWithInvalidCredentials(admin, 123459)</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Functional_Suite" title="test.LoginPageTest" class="method navigator-link" hash-for-method="verifyErrorMessageWhileLoggingWithInvalidCredentials(admim, 123456)">verifyErrorMessageWhileLoggingWithInvalidCredentials(admim, 123456)</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
@@ -143,6 +129,11 @@
                       <span>
                         <img src="passed.png" width="3%"/>
                         <a href="#" panel-name="suite-Functional_Suite" title="test.ResetPageTest" class="method navigator-link" hash-for-method="verifyErrorMessageWithInvalidEmailid">verifyErrorMessageWithInvalidEmailid</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Functional_Suite" title="test.HomePageTest" class="method navigator-link" hash-for-method="verifyHomePageTittle">verifyHomePageTittle</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
@@ -202,9 +193,9 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-Functional_Suite" class="panel Functional_Suite">
-          <div class="suite-Functional_Suite-class-failed">
+          <div class="suite-Functional_Suite-class-passed">
             <div class="main-panel-header rounded-window-top">
-              <img src="failed.png"/>
+              <img src="passed.png"/>
               <span class="class-name">test.HomePageTest</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
@@ -213,15 +204,39 @@
                   <a name="verifyHomePageTittle">
                   </a> <!-- verifyHomePageTittle -->
                   <span class="method-name">verifyHomePageTittle</span>
-                  <div class="stack-trace">java.lang.AssertionError: invalid tittle expected [Home - Maxfest Enterprises PVT LTD,Kochi123] but found [Home - Maxfest Enterprises PVT LTD,Kochi]
-	at test.HomePageTest.verifyHomePageTittle(HomePageTest.java:28)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-... Removed 32 stack frames
-</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="verifyUserLoginDate">
+                  </a> <!-- verifyUserLoginDate -->
+                  <span class="method-name">verifyUserLoginDate</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-Functional_Suite-class-failed -->
+          </div> <!-- suite-Functional_Suite-class-passed -->
+          <div class="suite-Functional_Suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">test.ResetPageTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="verifyErrorMessageWithInvalidEmailid">
+                  </a> <!-- verifyErrorMessageWithInvalidEmailid -->
+                  <span class="method-name">verifyErrorMessageWithInvalidEmailid</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="verifyResetPageTittle">
+                  </a> <!-- verifyResetPageTittle -->
+                  <span class="method-name">verifyResetPageTittle</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Functional_Suite-class-passed -->
           <div class="suite-Functional_Suite-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
@@ -230,18 +245,18 @@
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="verifyErrorMessageWhileLoggingWithInvalidCredentials(admim, 123456)">
-                  </a> <!-- verifyErrorMessageWhileLoggingWithInvalidCredentials(admim, 123456) -->
-                  <span class="method-name">verifyErrorMessageWhileLoggingWithInvalidCredentials</span>
-                  <span class="parameters">(admim,123456)</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
                   <a name="verifyErrorMessageWhileLoggingWithInvalidCredentials(admin, 123459)">
                   </a> <!-- verifyErrorMessageWhileLoggingWithInvalidCredentials(admin, 123459) -->
                   <span class="method-name">verifyErrorMessageWhileLoggingWithInvalidCredentials</span>
                   <span class="parameters">(admin,123459)</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="verifyErrorMessageWhileLoggingWithInvalidCredentials(admim, 123456)">
+                  </a> <!-- verifyErrorMessageWhileLoggingWithInvalidCredentials(admim, 123456) -->
+                  <span class="method-name">verifyErrorMessageWhileLoggingWithInvalidCredentials</span>
+                  <span class="parameters">(admim,123456)</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
               <div class="method">
@@ -286,35 +301,6 @@
           <div class="suite-Functional_Suite-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
-              <span class="class-name">test.UserManagementPageTest</span>
-            </div> <!-- main-panel-header rounded-window-top -->
-            <div class="main-panel-content rounded-window-bottom">
-              <div class="method">
-                <div class="method-content">
-                  <a name="verifyUserManagementOPtionRoles">
-                  </a> <!-- verifyUserManagementOPtionRoles -->
-                  <span class="method-name">verifyUserManagementOPtionRoles</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="verifyUserManagementOPtionSales">
-                  </a> <!-- verifyUserManagementOPtionSales -->
-                  <span class="method-name">verifyUserManagementOPtionSales</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="verifyUserManagementOPtionUsers">
-                  </a> <!-- verifyUserManagementOPtionUsers -->
-                  <span class="method-name">verifyUserManagementOPtionUsers</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-            </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-Functional_Suite-class-passed -->
-          <div class="suite-Functional_Suite-class-passed">
-            <div class="main-panel-header rounded-window-top">
-              <img src="passed.png"/>
               <span class="class-name">test.AddUserPageTest</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
@@ -344,36 +330,28 @@
           <div class="suite-Functional_Suite-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
-              <span class="class-name">test.HomePageTest</span>
+              <span class="class-name">test.UserManagementPageTest</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="verifyUserLoginDate">
-                  </a> <!-- verifyUserLoginDate -->
-                  <span class="method-name">verifyUserLoginDate</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-            </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-Functional_Suite-class-passed -->
-          <div class="suite-Functional_Suite-class-passed">
-            <div class="main-panel-header rounded-window-top">
-              <img src="passed.png"/>
-              <span class="class-name">test.ResetPageTest</span>
-            </div> <!-- main-panel-header rounded-window-top -->
-            <div class="main-panel-content rounded-window-bottom">
-              <div class="method">
-                <div class="method-content">
-                  <a name="verifyErrorMessageWithInvalidEmailid">
-                  </a> <!-- verifyErrorMessageWithInvalidEmailid -->
-                  <span class="method-name">verifyErrorMessageWithInvalidEmailid</span>
+                  <a name="verifyUserManagementOPtionRoles">
+                  </a> <!-- verifyUserManagementOPtionRoles -->
+                  <span class="method-name">verifyUserManagementOPtionRoles</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
               <div class="method">
                 <div class="method-content">
-                  <a name="verifyResetPageTittle">
-                  </a> <!-- verifyResetPageTittle -->
-                  <span class="method-name">verifyResetPageTittle</span>
+                  <a name="verifyUserManagementOPtionSales">
+                  </a> <!-- verifyUserManagementOPtionSales -->
+                  <span class="method-name">verifyUserManagementOPtionSales</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="verifyUserManagementOPtionUsers">
+                  </a> <!-- verifyUserManagementOPtionUsers -->
+                  <span class="method-name">verifyUserManagementOPtionUsers</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -516,67 +494,67 @@ data.addRows(16);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'verifyUserLoginWithNewlyAddedUser')
 data.setCell(0, 2, 'test.AddUserPageTest')
-data.setCell(0, 3, 17059);
+data.setCell(0, 3, 17447);
 data.setCell(1, 0, 1)
 data.setCell(1, 1, 'verifyAddUser')
 data.setCell(1, 2, 'test.AddUserPageTest')
-data.setCell(1, 3, 10618);
+data.setCell(1, 3, 9867);
 data.setCell(2, 0, 2)
-data.setCell(2, 1, 'verifyHomePageTittle')
-data.setCell(2, 2, 'test.HomePageTest')
-data.setCell(2, 3, 6447);
+data.setCell(2, 1, 'verifyAddUserTittle')
+data.setCell(2, 2, 'test.AddUserPageTest')
+data.setCell(2, 3, 5428);
 data.setCell(3, 0, 3)
-data.setCell(3, 1, 'verifyAddUserTittle')
-data.setCell(3, 2, 'test.AddUserPageTest')
-data.setCell(3, 3, 5892);
+data.setCell(3, 1, 'verifyManageUserTittle')
+data.setCell(3, 2, 'test.UsersPageTest')
+data.setCell(3, 3, 4269);
 data.setCell(4, 0, 4)
-data.setCell(4, 1, 'verifyManageUserTittle')
-data.setCell(4, 2, 'test.UsersPageTest')
-data.setCell(4, 3, 4413);
+data.setCell(4, 1, 'verifyHomePageTittle')
+data.setCell(4, 2, 'test.HomePageTest')
+data.setCell(4, 3, 4223);
 data.setCell(5, 0, 5)
-data.setCell(5, 1, 'verifyUserLoginWithValidCredentials')
-data.setCell(5, 2, 'test.LoginPageTest')
-data.setCell(5, 3, 3777);
+data.setCell(5, 1, 'verifyUserManagementOPtionRoles')
+data.setCell(5, 2, 'test.UserManagementPageTest')
+data.setCell(5, 3, 3157);
 data.setCell(6, 0, 6)
-data.setCell(6, 1, 'verifyUserLoginDate')
-data.setCell(6, 2, 'test.HomePageTest')
-data.setCell(6, 3, 3656);
+data.setCell(6, 1, 'verifyUserManagementOPtionUsers')
+data.setCell(6, 2, 'test.UserManagementPageTest')
+data.setCell(6, 3, 3034);
 data.setCell(7, 0, 7)
-data.setCell(7, 1, 'verifyUserManagementOPtionUsers')
-data.setCell(7, 2, 'test.UserManagementPageTest')
-data.setCell(7, 3, 2813);
+data.setCell(7, 1, 'verifyUserLoginWithValidCredentials')
+data.setCell(7, 2, 'test.LoginPageTest')
+data.setCell(7, 3, 2853);
 data.setCell(8, 0, 8)
-data.setCell(8, 1, 'verifyUserManagementOPtionRoles')
+data.setCell(8, 1, 'verifyUserManagementOPtionSales')
 data.setCell(8, 2, 'test.UserManagementPageTest')
-data.setCell(8, 3, 2803);
+data.setCell(8, 3, 2721);
 data.setCell(9, 0, 9)
-data.setCell(9, 1, 'verifyUserManagementOPtionSales')
-data.setCell(9, 2, 'test.UserManagementPageTest')
-data.setCell(9, 3, 2698);
+data.setCell(9, 1, 'verifyUserLoginDate')
+data.setCell(9, 2, 'test.HomePageTest')
+data.setCell(9, 3, 2601);
 data.setCell(10, 0, 10)
 data.setCell(10, 1, 'verifyErrorMessageWithInvalidEmailid')
 data.setCell(10, 2, 'test.ResetPageTest')
-data.setCell(10, 3, 1485);
+data.setCell(10, 3, 1515);
 data.setCell(11, 0, 11)
 data.setCell(11, 1, 'verifyErrorMessageWhileLoggingWithInvalidCredentials')
 data.setCell(11, 2, 'test.LoginPageTest')
-data.setCell(11, 3, 1357);
+data.setCell(11, 3, 1137);
 data.setCell(12, 0, 12)
 data.setCell(12, 1, 'verifyErrorMessageWhileLoggingWithInvalidCredentials')
 data.setCell(12, 2, 'test.LoginPageTest')
-data.setCell(12, 3, 1207);
+data.setCell(12, 3, 1136);
 data.setCell(13, 0, 13)
 data.setCell(13, 1, 'verifyErrorMessageWhileLoggingWithInvalidCredentials')
 data.setCell(13, 2, 'test.LoginPageTest')
-data.setCell(13, 3, 1157);
+data.setCell(13, 3, 992);
 data.setCell(14, 0, 14)
 data.setCell(14, 1, 'verifyResetPageTittle')
 data.setCell(14, 2, 'test.ResetPageTest')
-data.setCell(14, 3, 676);
+data.setCell(14, 3, 664);
 data.setCell(15, 0, 15)
 data.setCell(15, 1, 'verifyLoginPageTittle')
 data.setCell(15, 2, 'test.LoginPageTest')
-data.setCell(15, 3, 89);
+data.setCell(15, 3, 80);
 window.suiteTableData['Functional_Suite']= { tableData: data, tableDiv: 'times-div-Functional_Suite'}
 return data;
 }
@@ -613,209 +591,207 @@ return data;
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
-                <img src="failed.png">
-                </img>
                 <span class="method-name">verifyHomePageTittle</span>
-                <span class="method-start">7133 ms</span>
+                <span class="method-start">14311 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
-                <span class="method-name">closeBrowser([TestResult name=verifyHomePageTittle status=FAILURE method=HomePageTest.verifyHomePageTittle()[pri:...)</span>
-                <span class="method-start">13611 ms</span>
+                <span class="method-name">closeBrowser([TestResult name=verifyHomePageTittle status=SUCCESS method=HomePageTest.verifyHomePageTittle()[pri:...)</span>
+                <span class="method-start">18554 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">setup(Chrome, https://qalegend.com/billing/public/login)</span>
-                <span class="method-start">14234 ms</span>
+                <span class="method-start">18741 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">verifyUserLoginDate</span>
-                <span class="method-start">21698 ms</span>
+                <span class="method-start">25498 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">closeBrowser([TestResult name=verifyUserLoginDate status=SUCCESS method=HomePageTest.verifyUserLoginDate()[pri:7,...)</span>
-                <span class="method-start">25358 ms</span>
+                <span class="method-start">28103 ms</span>
               </div> <!-- configuration-method after -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">test.LoginPageTest</div> <!-- chronological-class-name -->
               <div class="configuration-method before">
                 <span class="method-name">setup(Chrome, https://qalegend.com/billing/public/login)</span>
-                <span class="method-start">25491 ms</span>
+                <span class="method-start">28317 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">verifyLoginPageTittle</span>
-                <span class="method-start">33028 ms</span>
+                <span class="method-start">33826 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">closeBrowser([TestResult name=verifyLoginPageTittle status=SUCCESS method=LoginPageTest.verifyLoginPageTittle()[p...)</span>
-                <span class="method-start">33124 ms</span>
+                <span class="method-start">33909 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">setup(Chrome, https://qalegend.com/billing/public/login)</span>
-                <span class="method-start">33341 ms</span>
+                <span class="method-start">34206 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">verifyUserLoginWithValidCredentials</span>
-                <span class="method-start">42106 ms</span>
+                <span class="method-start">41303 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">closeBrowser([TestResult name=verifyUserLoginWithValidCredentials status=SUCCESS method=LoginPageTest.verifyUserL...)</span>
-                <span class="method-start">45886 ms</span>
+                <span class="method-start">44158 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">setup(Chrome, https://qalegend.com/billing/public/login)</span>
-                <span class="method-start">46153 ms</span>
+                <span class="method-start">44354 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">verifyErrorMessageWhileLoggingWithInvalidCredentials(admim, 123456)</span>
-                <span class="method-start">50197 ms</span>
+                <span class="method-start">53167 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">closeBrowser([TestResult name=verifyErrorMessageWhileLoggingWithInvalidCredentials status=SUCCESS method=LoginPag...)</span>
-                <span class="method-start">51357 ms</span>
+                <span class="method-start">54161 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">setup(Chrome, https://qalegend.com/billing/public/login)</span>
-                <span class="method-start">51561 ms</span>
+                <span class="method-start">54385 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">verifyErrorMessageWhileLoggingWithInvalidCredentials(admin, 123459)</span>
-                <span class="method-start">57139 ms</span>
+                <span class="method-start">61457 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">closeBrowser([TestResult name=verifyErrorMessageWhileLoggingWithInvalidCredentials status=SUCCESS method=LoginPag...)</span>
-                <span class="method-start">58499 ms</span>
+                <span class="method-start">62596 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">setup(Chrome, https://qalegend.com/billing/public/login)</span>
-                <span class="method-start">58710 ms</span>
+                <span class="method-start">62858 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">verifyErrorMessageWhileLoggingWithInvalidCredentials(admio, 123456)</span>
-                <span class="method-start">69532 ms</span>
+                <span class="method-start">71728 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">closeBrowser([TestResult name=verifyErrorMessageWhileLoggingWithInvalidCredentials status=SUCCESS method=LoginPag...)</span>
-                <span class="method-start">70742 ms</span>
+                <span class="method-start">72867 ms</span>
               </div> <!-- configuration-method after -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">test.ResetPageTest</div> <!-- chronological-class-name -->
               <div class="configuration-method before">
                 <span class="method-name">setup(Chrome, https://qalegend.com/billing/public/login)</span>
-                <span class="method-start">71024 ms</span>
+                <span class="method-start">73076 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">verifyResetPageTittle</span>
-                <span class="method-start">77886 ms</span>
+                <span class="method-start">79596 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">closeBrowser([TestResult name=verifyResetPageTittle status=SUCCESS method=ResetPageTest.verifyResetPageTittle()[p...)</span>
-                <span class="method-start">78565 ms</span>
+                <span class="method-start">80262 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">setup(Chrome, https://qalegend.com/billing/public/login)</span>
-                <span class="method-start">78807 ms</span>
+                <span class="method-start">80380 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">verifyErrorMessageWithInvalidEmailid</span>
-                <span class="method-start">86091 ms</span>
+                <span class="method-start">88034 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">closeBrowser([TestResult name=verifyErrorMessageWithInvalidEmailid status=SUCCESS method=ResetPageTest.verifyErro...)</span>
-                <span class="method-start">87579 ms</span>
+                <span class="method-start">89551 ms</span>
               </div> <!-- configuration-method after -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">test.UsersPageTest</div> <!-- chronological-class-name -->
               <div class="configuration-method before">
                 <span class="method-name">setup(Chrome, https://qalegend.com/billing/public/login)</span>
-                <span class="method-start">87755 ms</span>
+                <span class="method-start">89672 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">verifyManageUserTittle</span>
-                <span class="method-start">98145 ms</span>
+                <span class="method-start">97472 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">closeBrowser([TestResult name=verifyManageUserTittle status=SUCCESS method=UsersPageTest.verifyManageUserTittle()...)</span>
-                <span class="method-start">102560 ms</span>
+                <span class="method-start">101745 ms</span>
               </div> <!-- configuration-method after -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">test.AddUserPageTest</div> <!-- chronological-class-name -->
               <div class="configuration-method before">
                 <span class="method-name">setup(Chrome, https://qalegend.com/billing/public/login)</span>
-                <span class="method-start">102701 ms</span>
+                <span class="method-start">101907 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">verifyAddUserTittle</span>
-                <span class="method-start">108180 ms</span>
+                <span class="method-start">105906 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">closeBrowser([TestResult name=verifyAddUserTittle status=SUCCESS method=AddUserPageTest.verifyAddUserTittle()[pri...)</span>
-                <span class="method-start">114076 ms</span>
+                <span class="method-start">111336 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">setup(Chrome, https://qalegend.com/billing/public/login)</span>
-                <span class="method-start">114237 ms</span>
+                <span class="method-start">111600 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">verifyAddUser</span>
-                <span class="method-start">117966 ms</span>
+                <span class="method-start">118472 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">closeBrowser([TestResult name=verifyAddUser status=SUCCESS method=AddUserPageTest.verifyAddUser()[pri:10, instanc...)</span>
-                <span class="method-start">128587 ms</span>
+                <span class="method-start">128342 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">setup(Chrome, https://qalegend.com/billing/public/login)</span>
-                <span class="method-start">128717 ms</span>
+                <span class="method-start">128665 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">verifyUserLoginWithNewlyAddedUser</span>
-                <span class="method-start">133966 ms</span>
+                <span class="method-start">133868 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">closeBrowser([TestResult name=verifyUserLoginWithNewlyAddedUser status=SUCCESS method=AddUserPageTest.verifyUserL...)</span>
-                <span class="method-start">151027 ms</span>
+                <span class="method-start">151318 ms</span>
               </div> <!-- configuration-method after -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">test.UserManagementPageTest</div> <!-- chronological-class-name -->
               <div class="configuration-method before">
                 <span class="method-name">setup(Chrome, https://qalegend.com/billing/public/login)</span>
-                <span class="method-start">151194 ms</span>
+                <span class="method-start">151491 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">verifyUserManagementOPtionUsers</span>
-                <span class="method-start">158826 ms</span>
+                <span class="method-start">157531 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">closeBrowser([TestResult name=verifyUserManagementOPtionUsers status=SUCCESS method=UserManagementPageTest.verify...)</span>
-                <span class="method-start">161640 ms</span>
+                <span class="method-start">160566 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">setup(Chrome, https://qalegend.com/billing/public/login)</span>
-                <span class="method-start">161896 ms</span>
+                <span class="method-start">160776 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">verifyUserManagementOPtionRoles</span>
-                <span class="method-start">167536 ms</span>
+                <span class="method-start">165148 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">closeBrowser([TestResult name=verifyUserManagementOPtionRoles status=SUCCESS method=UserManagementPageTest.verify...)</span>
-                <span class="method-start">170341 ms</span>
+                <span class="method-start">168307 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">setup(Chrome, https://qalegend.com/billing/public/login)</span>
-                <span class="method-start">170513 ms</span>
+                <span class="method-start">168515 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">verifyUserManagementOPtionSales</span>
-                <span class="method-start">175725 ms</span>
+                <span class="method-start">173016 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">closeBrowser([TestResult name=verifyUserManagementOPtionSales status=SUCCESS method=UserManagementPageTest.verify...)</span>
-                <span class="method-start">178425 ms</span>
+                <span class="method-start">175739 ms</span>
               </div> <!-- configuration-method after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
