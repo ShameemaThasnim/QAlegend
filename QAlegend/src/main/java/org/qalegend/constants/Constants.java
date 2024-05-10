@@ -3,6 +3,7 @@ package org.qalegend.constants;
 public class Constants {
 	public static final String TEST_DATA_EXCELPATH="\\src\\test\\resources\\TestData.xlsx";
 	public static final String HOME_DIRECTORY= System.getProperty("user.dir");
+	public static final String CON_FIG_FILE= System.getProperty(HOME_DIRECTORY+"\\src\\main\\resources\\config.properties");
 	public static final String RESET_PAGE_DATA= "ResetPageData";
 	public static final String LOGIN_PAGE_DATA= "LoginPageData";
 	public static final String HOME_PAGE_DATA= "HomePageData";

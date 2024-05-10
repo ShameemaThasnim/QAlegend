@@ -36,9 +36,9 @@ public class LoginPageTest extends Base{
 		login.enterPassword(password);
 		HomePage home= new HomePage(driver);
 		HomePage home1=login.clickOnLoginButton();
-		WaitUtility.waitUsingImplicitWait(driver);
+		//WaitUtility.waitUsingImplicitWait(driver);
 		home.clickOnEndTour();
-		WaitUtility.waitUsingImplicitWait(driver);
+		//WaitUtility.waitUsingImplicitWait(driver);
 		String user_name=home.getLoggedUser();
 		String expected_user=ExcelUtility.readStringData(7, 0, Constants.LOGIN_PAGE_DATA);
 		Assert.assertEquals(user_name, expected_user,Messages.LOGIN_MISMATCH);

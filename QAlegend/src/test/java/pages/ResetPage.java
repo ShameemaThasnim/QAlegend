@@ -24,10 +24,12 @@ public class ResetPage {
 	
 	
 	public void enterEmail(String expected_email) {
-		WebElementUtility.enterValue(email_field, expected_email);
+		//WebElementUtility.enterValue(email_field, expected_email);
+		email_field.sendKeys(expected_email);
 		}
 	public void clickOnResetLink() {
-		WebElementUtility.clickOnElement(Resend_link);
+		//WebElementUtility.clickOnElement(Resend_link);
+		Resend_link.click();
 	
 	}
 	public String getEmailErrorMessage() {

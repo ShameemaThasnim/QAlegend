@@ -29,11 +29,14 @@ public class LoginPage {
 			return new ResetPage(driver);
 		}
 		public void enterUserName(String user_name) {
-			WebElementUtility.enterValue(username, user_name);
+			//WebElementUtility.enterValue(username, user_name);
+			username.sendKeys(user_name);
+			
 			
 		}
 		public void enterPassword(String pass_word) {
-			WebElementUtility.enterValue(Password, pass_word);
+			//WebElementUtility.enterValue(Password, pass_word);
+			Password.sendKeys(pass_word);
 		}
 		public HomePage clickOnLoginButton() {
 			WebElementUtility.clickOnElement(login);

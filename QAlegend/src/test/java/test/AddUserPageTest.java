@@ -33,12 +33,12 @@ public class AddUserPageTest extends Base {
 		HomePage home= new HomePage(driver);
 		HomePage home_=login.clickOnLoginButton();
 		home.clickOnEndTour();
-		WaitUtility.waitUsingImplicitWait(driver);
+		//WaitUtility.waitUsingImplicitWait(driver);
 		home.clickOnUserManagement();
 		UsersPage manage=home.clickOnUsers();
 		UsersPage manageuser= new UsersPage(driver);
 		AddUserPage adduser=manageuser.clickOnAddButton();
-		WaitUtility.waitUsingImplicitWait(driver);
+		//WaitUtility.waitUsingImplicitWait(driver);
 		AddUserPage add_user= new AddUserPage(driver);
 		String acutal_tittle=add_user.getTittle();
 		String expected_tittle=ExcelUtility.readStringData(7, 0, Constants.ADD_USER_DATA);
@@ -57,12 +57,12 @@ public void verifyAddUser()
 		HomePage home= new HomePage(driver);
 		HomePage home_=login.clickOnLoginButton();
 		home.clickOnEndTour();
-		WaitUtility.waitUsingImplicitWait(driver);
+		//WaitUtility.waitUsingImplicitWait(driver);
 		home.clickOnUserManagement();
 		UsersPage manage=home.clickOnUsers();
 		UsersPage manageuser= new UsersPage(driver);
 		AddUserPage adduser=manageuser.clickOnAddButton();
-		WaitUtility.waitUsingImplicitWait(driver);
+		//WaitUtility.waitUsingImplicitWait(driver);
 		AddUserPage add_user= new AddUserPage(driver);
 		String prefix=ExcelUtility.readStringData(0, 0, Constants.ADD_USER_DATA);
 		String firstName= RandomDataUtility.getFirstName();
@@ -81,7 +81,7 @@ public void verifyAddUser()
 		manageuser.clickOnSearch();
 		String search_user=email;
 		manageuser.enterSearchValue(search_user);
-		WaitUtility.waitUsingImplicitWait(driver);
+		//WaitUtility.waitUsingImplicitWait(driver);
 		String actual_user=manageuser.getSerachUser();
 		
 		Assert.assertEquals(actual_user, user_name,Messages.USER_CREATION_FAILED);
@@ -97,12 +97,12 @@ public void verifyAddUser()
 		HomePage home= new HomePage(driver);
 		HomePage home_=login.clickOnLoginButton();
 		home.clickOnEndTour();
-		WaitUtility.waitUsingImplicitWait(driver);
+		//WaitUtility.waitUsingImplicitWait(driver);
 		home.clickOnUserManagement();
 		UsersPage manage=home.clickOnUsers();
 		UsersPage manageuser= new UsersPage(driver);
 		AddUserPage adduser=manageuser.clickOnAddButton();
-		WaitUtility.waitUsingImplicitWait(driver);
+		//WaitUtility.waitUsingImplicitWait(driver);
 		AddUserPage add_user= new AddUserPage(driver);
 		String firstName= RandomDataUtility.getFirstName();
 		String lastname= RandomDataUtility.getLastName();
@@ -118,7 +118,7 @@ public void verifyAddUser()
 		UsersPage manage_s=add_user.clickOnSubmitButton();
 		manage.clickOnUserName();
 		LoginPage relog=manageuser.clickOnLogOut();
-		WaitUtility.waitUsingImplicitWait(driver);
+		//WaitUtility.waitUsingImplicitWait(driver);
 		String username_re=user_name;
 		String password_re=pass_word;
 		LoginPage login_re= new LoginPage(driver);
@@ -126,7 +126,7 @@ public void verifyAddUser()
 		login.enterPassword(password_re);
 		HomePage home1= new HomePage(driver);
 		HomePage home_2=login.clickOnLoginButton();
-		WaitUtility.waitUsingImplicitWait(driver);
+		//WaitUtility.waitUsingImplicitWait(driver);
 		String actual_user=home_2.getLoggedUser();
 		String expected_user="Welcome "+firstName+",";
 		Assert.assertEquals(actual_user, expected_user,Messages.RELOGIN_FAILED);

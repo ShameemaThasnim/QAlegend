@@ -27,7 +27,7 @@ public class UserManagementPageTest extends Base{
 	HomePage home= new HomePage(driver);
 	HomePage home_=login.clickOnLoginButton();
 	home.clickOnEndTour();
-	WaitUtility.waitUsingImplicitWait(driver);
+	//WaitUtility.waitUsingImplicitWait(driver);
 	home.clickOnUserManagement();
 	UserManagementPage usermanagementpage_obj= new UserManagementPage(driver);
 	boolean user_status=usermanagementpage_obj.isUserEnable();
@@ -44,7 +44,7 @@ public class UserManagementPageTest extends Base{
 		HomePage home= new HomePage(driver);
 		HomePage home_=login.clickOnLoginButton();
 		home.clickOnEndTour();
-		WaitUtility.waitUsingImplicitWait(driver);
+		//WaitUtility.waitUsingImplicitWait(driver);
 		home.clickOnUserManagement();
 		UserManagementPage usermanagementpage_obj= new UserManagementPage(driver);
 		boolean roles_status=usermanagementpage_obj.isRoleEnable();
@@ -61,7 +61,7 @@ public class UserManagementPageTest extends Base{
 		HomePage home= new HomePage(driver);
 		HomePage home_=login.clickOnLoginButton();
 		home.clickOnEndTour();
-		WaitUtility.waitUsingImplicitWait(driver);
+		//WaitUtility.waitUsingImplicitWait(driver);
 		home.clickOnUserManagement();
 		UserManagementPage usermanagementpage_obj= new UserManagementPage(driver);
 		boolean sales_status=usermanagementpage_obj.isSaleEnable();

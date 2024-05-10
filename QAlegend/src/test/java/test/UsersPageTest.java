@@ -27,7 +27,7 @@ public class UsersPageTest extends Base{
 		HomePage home= new HomePage(driver);
 		HomePage home_=login.clickOnLoginButton();
 		home.clickOnEndTour();
-		WaitUtility.waitUsingImplicitWait(driver);
+		//WaitUtility.waitUsingImplicitWait(driver);
 		home.clickOnUserManagement();
 		UsersPage manage=home.clickOnUsers();
 		UsersPage manageuser= new UsersPage(driver);

@@ -3,18 +3,20 @@
 <suite name="Failed suite [Functional Suite]" guice-stage="DEVELOPMENT">
   <listeners>
     <listener class-name="listeners.Extend_Listeners"/>
+    <listener class-name="listeners.Annotation_Transformer"/>
   </listeners>
   <test thread-count="5" name="Report Test(failed)">
     <parameter name="baseurl" value="https://qalegend.com/billing/public/login"/>
     <parameter name="browser" value="Chrome"/>
     <classes>
-      <class name="test.HomePageTest">
+      <class name="test.AddUserPageTest">
         <methods>
           <include name="closeBrowser"/>
           <include name="setup"/>
-          <include name="verifyHomePageTittle"/>
+          <include name="verifyUserLoginWithNewlyAddedUser"/>
+          <include name="verifyAddUser"/>
         </methods>
-      </class> <!-- test.HomePageTest -->
+      </class> <!-- test.AddUserPageTest -->
     </classes>
   </test> <!-- Report Test(failed) -->
 </suite> <!-- Failed suite [Functional Suite] -->
